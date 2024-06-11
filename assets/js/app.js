@@ -33,7 +33,7 @@ let searchTimeoutDuration = 500;
 searchField.addEventListener("input", function () {
   searchTimeout ?? clearTimeout(searchTimeout);
 
-  if (!searchField.value) {
+  if (searchField.value) {
     searchResult.classList.remove("active");
     searchField.innerHTML = "";
     searchField.classList.remove("searching");
